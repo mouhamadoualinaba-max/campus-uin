@@ -1,3 +1,8 @@
+add_library(uincampus_core
+src/version.cpp
+src/regles.cpp
+src/saisie.cpp)
+
 cmake_minimum_required(VERSION 3.25)
 project(UINCampus
     VERSION 0.1.0

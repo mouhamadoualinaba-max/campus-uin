@@ -1,4 +1,8 @@
-#include "uincampus/version.hpp"
+#include "../include/uincampus/version.hpp"
+
+#ifndef UIN_VERSION
+#define UIN_VERSION "0.0.0"
+#endif
 
 namespace uin {
 
