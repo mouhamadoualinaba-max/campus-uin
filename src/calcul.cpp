@@ -37,4 +37,16 @@ return Statistiques{
 .ecartType = std::sqrt(sommeCarres / static_cast<double>(notes.size())),
 };
 }
-int compterValidees(const std::vector<doub
+int compterValidees(const std::vector<double >& notes, double seuil)
+{
+return std::count_if(notes.begin(), notes.end(),[seuil](double n) { return n >= seuil; });
+}
+double somme(std::span<const double> valeurs)
+{
+return std::accumulate(valeurs.begin(), valeurs.end(), 0.0);
+}
+double moyenne(std::span<const double> notes)
+{
+assert(!notes.empty() && "moyenne() : aucune note");
+return somme(notes) / static_cast<double>(notes.size());
+}
